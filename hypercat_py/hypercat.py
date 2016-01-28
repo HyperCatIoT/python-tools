@@ -39,7 +39,7 @@
 ##    h2 = Hypercat("ChildCatalogue")
 ##    h.addItem(h2, "http://FIXMEcat")
 ##    # Create a resource, and add it as another child of the first catalogue
-##    r = resource("resource1", "application/vnd.tsbiot.sensordata+json")
+##    r = resource("resource1", "application/vnd.hypercat.sensordata+json")
 ##    h.addItem(r, "http://FIXMEresource")
 ##    # Print the raw JSON of the catalogue, and then with human-friendly formatting
 ##    print h.asJSON()
@@ -83,15 +83,15 @@ HREF = "href"
 ITEM_METADATA = "i-object-metadata" # Name of the array of metadata about each item in the catalogue
 
 # Mandatory relations & types
-ISCONTENTTYPE_RELATION = "urn:X-tsbiot:rels:isContentType"  # Mandatory for catalogues, but not resources
-CATALOGUE_TYPE = "application/vnd.tsbiot.catalogue+json"
-DESCRIPTION_RELATION = "urn:X-tsbiot:rels:hasDescription:en"
+ISCONTENTTYPE_RELATION = "urn:X-hypercat:rels:isContentType"  # Mandatory for catalogues, but not resources
+CATALOGUE_TYPE = "application/vnd.hypercat.catalogue+json"
+DESCRIPTION_RELATION = "urn:X-hypercat:rels:hasDescription:en"
 
 # Optional relations & types
-SUPPORTS_SEARCH_RELATION = "urn:X-tsbiot:rels:supportsSearch"
-SUPPORTS_SEARCH_VAL = "urn:X-tsbiot:search:simple"
-HAS_HOMEPAGE_RELATION = "urn:X-tsbiot:rels:hasHomepage"
-CONTAINS_CONTENT_TYPE_RELATION = "urn:X-tsbiot:rels:containsContentType"
+SUPPORTS_SEARCH_RELATION = "urn:X-hypercat:rels:supportsSearch"
+SUPPORTS_SEARCH_VAL = "urn:X-hypercat:search:simple"
+HAS_HOMEPAGE_RELATION = "urn:X-hypercat:rels:hasHomepage"
+CONTAINS_CONTENT_TYPE_RELATION = "urn:X-hypercat:rels:containsContentType"
 
 # We manage Catalogues and Resources as raw Python JSON objects (i.e. we construct them in their final form)
 
